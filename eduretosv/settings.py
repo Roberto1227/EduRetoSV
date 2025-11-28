@@ -109,12 +109,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+import os  # Lo ideal es que esta línea esté hasta arriba del archivo, pero aquí funciona.
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
+
 STATIC_URL = '/static/'
+
+# ESTA ES LA LÍNEA PARA PRODUCCIÓN (Donde se guardarán al final):
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Donde están tus archivos ahorita (Tu carpeta de desarrollo):
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
 
 # Media files
 MEDIA_URL = '/media/'
